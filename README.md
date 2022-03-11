@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
->Sup? I just started a new course from udemy so I'll be daily updating (basicexercises.py) and shit.
+>Sup? I just started a new course from udemy so I'll be daily updating basicexercises.py file!
 >
 >TROPA DO SCOOBY TA NA A... 😴😴😴😴😴
 
