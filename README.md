@@ -1,5 +1,6 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >Sup? I just started a new course from udemy so I will be updating daily that list of exercises :)
+>TROPA DO SCOOBY TA NA A... 😴😴😴😴😴
 
 <div align="center">
     <a href="https://github.com/parreira7/udemypythoncourse">
