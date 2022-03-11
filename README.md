@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
->Sup? I just started a new course from udemy so I will be daily updating that list of exercises :)
+>Sup? I just started a new course from udemy so I will be updating daily that list of exercises :)
 
 <div align="center">
     <a href="https://github.com/parreira7/udemypythoncourse">
