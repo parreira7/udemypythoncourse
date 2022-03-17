@@ -337,17 +337,20 @@ ano = (2022)
 idade = int(input("Insira a sua idade: "))
 ano_idade = (ano - idade)
 print("Você nasceu em:", ano_idade)
-"""
+
 print("Exercício 51")
 print("Leitor de coordenadas x e y no ponto R² de origem!\n")
-x1 = int(input(f'Informe x1 => '))
-y1 = int(input(f'Informe y1 => '))
-distancia = int((((0 - x1) ** 2) + ((0 - y1) ** 2)) ** (1 / 2))
+x1 = int(input(f'x1 => '))
+
+y1 = int(input(f'y1 => '))
+
+calculo = int((((0 - x1) ** 2) + ((0 - y1) ** 2)) ** (1 / 2))
 
 print(f'A distância entre a origem (0,0) e o ponto de'
 
-     f' coordenadas ({x1},{y1}) é: {distancia}')
-#################################################
+     f' coordenadas ({x1},{y1}) é: {calculo}')
+
+# Demonstrando o cálculo
 
 print(f'x2 - x1 = {0 - x1}, \n'
 
@@ -357,4 +360,28 @@ print(f'(x2 - x1) ** 2 = {(0 - x1) ** 2}, \n'
 
      f'(y2 - y1) ** 2 = {(0 - y1) ** 2}')
 
-print(f'Distância da origem = {distancia}')
+print(f'Distância da origem = {calculo}\n')
+
+print(f'Exercício 52\n')
+premio = float(input("Insira o premio total: "))
+ganhadorA = float(input("Quanto o primeiro ganhador apostou? R$"))
+ganhadorB = float(input("Quanto o segundo ganhador apostou? R$"))
+ganhadorC = float(input("Quanto o terceiro ganhador apostou? R$"))
+resultado_1 = 0.5 * premio
+resultado_2 = 0.35 * premio
+resultado_3 = 0.15 * premio
+print('\n')
+print(f'De acordo com o premio estipulado, o primeiro ganhador ganhou R$%.2f reais' % resultado_1)
+print(f'De acordo com o premio estipulado, o segundo ganhador ganhou R$%.2f reais' % resultado_2)
+print(f'De acordo com o premio estipulado, o terceiro ganhador ganhou R$%.2f reais' % resultado_3)
+print('\n')
+
+print(f'Exercício 53\n')
+t_comprimento = float(input("Insira o comprimento do terreno:"))
+t_largura = float(input("Insira a largura do terreno:"))
+m2 = t_comprimento * t_largura
+print(f'Área do terreno:%.2f m²\n' % m2)
+preco_tela = float(input("Insira o preço da tela por metro: R$"))
+preco_por_m = preco_tela * m2
+print(f'O preço para cobrir todo o terreno com tela será de R$%.2f reais\n' % preco_por_m)
+"""
