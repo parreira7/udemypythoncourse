@@ -65,6 +65,49 @@ elif num1 > num:
     diferenca1 = (num1 - num)
     print("A diferença entre tais números será: %.2f" % diferenca1)
 print('\n')
-    
-"""""
+
 print(f'Exercício 7\n')
+num = float(input("Insira o primeiro número: "))
+num1 = float(input("Insira o segundo número: "))
+if num > num1:
+    print('O maior número é: %.2f' % num)
+elif num1 > num:
+    print('O maior número é: %.2f' % num1)
+elif num == num1:
+    print(f'\nOs números sao iguais!\n')
+
+print(f'Exercício 8\n')
+nota = float(input('Insira a nota do primeiro aluno: '))
+nota1 = float(input('Insira a nota do segundo aluno: '))
+print('\n')
+media = (nota + nota1) / 2
+if nota and nota1 >= 0:
+    print('A media será: %.2f' % media)
+elif nota and nota1 < 0:
+    print("Nota inválida.")
+elif nota and nota1 > 10:
+    print("Nota inválida!")
+
+print(f'Exercício 9\n')
+salario = float(input("Insira o salário mensal: "))
+emprestimo = float(input("Insira o empréstimo desejado: "))
+print('\n')
+zero_ponto_2 = salario * 0.2
+if emprestimo > zero_ponto_2:
+    print("Empréstimo nao concedido!")
+if emprestimo <= zero_ponto_2:
+    print("Empréstimo concedido!")
+    
+print(f'Exercício 10\n')
+sexo = input('Insira o sexo, sendo homem (H) e mulher (M): ')
+altura = float(input("Insira a sua altura: "))
+pesoH = (72.7 * altura) - 58
+pesoM = (62.1 * altura) - 44.7
+if sexo == "H":
+    print("Seu peso ideal será: %.2f" % pesoH)
+elif sexo == "M":
+    print("Seu peso ideal será: %.2f" % pesoM)
+else:
+    print("Sexo inválido!")
+print('\n')
+"""""
