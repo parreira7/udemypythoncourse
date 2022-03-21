@@ -110,4 +110,114 @@ elif sexo == "M":
 else:
     print("Sexo inválido!")
 print('\n')
+
+print(f'Exercício 11\n')
+num = int(input("Insira o número: "))
+u = num // 1 % 10
+d = num // 10 % 10
+c = num // 100 % 10
+m = num // 1000 % 10
+print('\nAnalisando o número {}'.format(num))
+print('Unidade {}'.format(u))
+print('Dezena {}'.format(d))
+print('Centena {}'.format(c))
+print('Milhar {}'.format(m))
+soma = u + d + c + m
+print('\nA soma dos digitos será: %.2f' % soma)
+
+import math
+print(f'Exercício 12\n')
+num = int(input("Insira um número inteiro: "))
+log = int(input("Informe o log de 'x': "))
+if num <= 0:
+    print(f'Número inválido.')
+if num > 0:
+    logaritmo = math.log(num, log)
+    print("O número em forma logaritmica será: %.2f" % logaritmo)
+    
+print(f'Exercício 13\n')
+def media_ponderada(x1, x2, x3, p1, p2, p3):
+    mp1 = (x1 * p1) + (x2 * p2) + (x3 * p3)
+    mp2 = p1 + p2 + p3
+    resultado = mp1 / mp2
+    return resultado
+
+nota1, peso1 = float(input('Insira a nota do aluno na prova 1: ')), int(input("Insira o peso da nota 1: "))
+nota2, peso2 = float(input('Insira a nota do aluno na prova 2: ')), int(input("Insira o peso da nota 2: "))
+nota3, peso3 = float(input('Insira a nota do aluno na prova 3: ')), int(input("Insira o peso da nota 3: "))
+
+media = media_ponderada(nota1, nota2, nota3, peso1, peso2, peso3)
+print(f'\nA média será: %.2f' % media, '\n')
+
+if media >= 6:
+    print(f'O aluno foi aprovado!')
+elif media <= 5 and media < 6:
+    print(f'O aluno está em recuperaçao!')
+elif media <= 4 and media < 5:
+    print(f'O aluno está reprovado!')
+print('\n')
+
+print(f'Exercício 14 \n')
+print(f'Dias da semana!')
+num = int(input("\nInsira um número tendo(1) = domingo, a (7): "))
+if num == 7:
+    print(f'O número correspondente ao dia da semana será sábado!')
+elif num == 6:
+    print(f'O número correspondente ao dia da semana será sexta-feira!')
+elif num == 5:
+    print(f'O número correspondente ao dia da semana será quinta-feira!')
+elif num == 4:
+    print(f'O número correspondente ao dia da semana será quarta-feira!')
+elif num == 3:
+    print(f'O número correspondente ao dia da semana será terça-feira!')
+elif num == 2:
+    print(f'O número correspondente ao dia da semana será segunda-feira!')
+elif num == 1:
+    print(f'O número correspondente ao dia da semana será domingo!')
+print('\n')
+
+print(f'Exercício 15 \n')
+print(f'Número correspondente à meses!')
+num = int(input("Insira um número de 1 a 12: "))
+if num <= 0:
+    print(f'Número inválido!')
+elif num > 12:
+    print(f'Número inválido!')
+elif num == 12:
+    print(f'O número correspondente ao mes será dezembro!')
+elif num == 11:
+    print(f'O número correspondente ao mes será novembro!')
+elif num == 10:
+    print(f'O número correspondente ao mes será outubro!')
+elif num == 9:
+    print(f'O número correspondente ao mes será setembro!')
+elif num == 8:
+    print(f'O número correspondente ao mes será agosto!')
+elif num == 7:
+    print(f'O número correspondente ao mes será julho!')
+elif num == 6:
+    print(f'O número correspondente ao mes será junho!')
+elif num == 5:
+    print(f'O número correspondente ao mes será maio!')
+elif num == 4:
+    print(f'O número correspondente ao mes será abril!')
+elif num == 3:
+    print(f'O número correspondente ao mes será março!')
+elif num == 2:
+    print(f'O número correspondente ao mes será fevereiro!')
+elif num == 1:
+    print(f'O número correspondente ao mes será janeiro!')
+    
+print(f'Exercício 16')
+print(f'Cálculo da área de um trapézio!')
+def calculo(x1, x2, x3):
+    area = (x1 + x2) * x3
+    resultado = area / 2
+    return resultado
+base_maior = float(input("Insira a base maior do trapézio: "))
+base_menor = float(input("Insira a base menor do trapézio: "))
+altura = float(input('Insira a altura do trapézio: '))
+area_t = calculo(base_maior, base_menor, altura)
+print(f'A área do trapézio será: %.2f' % area_t)     
 """""
+## {} []
