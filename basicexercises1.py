@@ -478,6 +478,65 @@ num2 = int(input("Insira um número: "))
 num3 = int(input("Insira um número: "))
 lista = [num1, num2, num3]
 print(sorted(lista))
-"""""
-## {} []
+
 print(f'Exercício 30')
+altura = float(input("Insira a altura: "))
+peso = float(input("Insira o peso: "))
+if (altura < 1.20) and (peso <= 60):
+    print(f'Categoria A')
+elif (altura < 1.20) and (peso >= 60) and (peso <= 90):
+    print(f'Categoria D')
+elif (altura < 1.20) and (peso > 90):
+    print(f'Categoria G')
+elif (altura >= 1.20) and (altura <= 1.70) and (peso <= 60):
+    print(f'Categoria B')
+elif (altura >= 1.20) and (altura <= 1.70) and (peso >= 60) and (peso <= 90):
+    print(f'Categoria E')
+elif (altura >= 1.20) and (altura <= 1.70) and (peso > 90):
+    print(f'Categoria H')
+elif (altura > 1.70) and (peso <= 60):
+    print(f'Categoria C')
+elif (altura > 1.70) and (peso >= 60) and (peso <= 90):
+    print(f'Categoria F')
+elif (altura>1.70) and (peso > 90):
+    print(f'Categoria I')
+else:
+    print(f'Inválido.')
+    
+print(f'Exercício 31')
+tabela = print(f'Cachorro Quente(100) R$ 1.20, Bauru(101) R$1.30, Bauru com Ovo(102) R$ 1.50')
+tabelaA = print(f'Hamburguer(103) R$1.20, Cheeseburguer(104) R$1.70, Suco(105) R$ 2.20, Refri(106) R$ 1.00')
+
+while True:
+    print(tabela)
+    total = 0
+    cod = int(input('Informe o codigo: '))
+    qtd = int(input("Digite a quantidade: "))
+    if cod == 100:
+        total = 1.20 * qtd
+    elif cod == 100:
+        total = 1.30 * qtd
+    elif cod == 102:
+        total = 1.50 * qtd
+    elif cod == 103:
+        total = 1.20 * qtd
+    elif cod == 104:
+        total = 1.70 * qtd
+    elif cod == 105:
+        total = 2.20 * qtd
+    elif cod == 106:
+        total = 1 * qtd
+    else:
+        print(f'Codigo inválido')
+    
+    print(f'O total será', total, 'reais!')
+    sair = input("Deseja sair? (Y/n) R: ")
+    if sair == 'Y':
+        print(f'Saindo!')
+        break
+    elif sair == 'n':
+        pass
+"""""
+## {} [] \
+    
+        
