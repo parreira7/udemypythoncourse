@@ -217,7 +217,51 @@ def calculo(x1, x2, x3):
 base_maior = float(input("Insira a base maior do trapézio: "))
 base_menor = float(input("Insira a base menor do trapézio: "))
 altura = float(input('Insira a altura do trapézio: '))
+if base_maior or base_menor or altura == 0:
+    print(f'Número inválido!')
 area_t = calculo(base_maior, base_menor, altura)
-print(f'A área do trapézio será: %.2f' % area_t)     
-"""""
+print(f'A área do trapézio será: %.2f' % area_t)    
+
+print(f'Exercício 17')
+#Se fosse necessário o cálculo dos lados, essa provavelmente seria a funçao:
+#def calculo_area(x1, x2, x3):
+#    calculo_lado = (x1 * x2 * x3) 
+#    resultado = (calculo_lado) / 2
+#    return resultado
+
+ladoA = float(input("Insira o valor do lado(A): "))
+ladoB = float(input("Insira o valor do lado(B): "))
+ladoC = float(input("Insira o valor do lado(C): "))
+if ladoA >= (ladoB + ladoC):
+    print(f'Inválido, pois, o comprimento de cada lado de um triangulo é menor do que a soma dos outros dois lados.')
+elif ladoB >= (ladoA + ladoC):
+    print(f'Inválido, pois, o comprimento de cada lado de um triangulo é menor do que a soma dos outros dois lados.')
+elif ladoC >= (ladoB + ladoA):
+    print(f'Inválido, pois, o comprimento de cada lado de um triangulo é menor do que a soma dos outros dois lados.')
+elif ladoC >= (ladoA + ladoB):
+    print(f'Inválido, pois, o comprimento de cada lado de um triangulo é menor do que a soma dos outros dois lados.')    
+elif ladoA == ladoB == ladoC:
+    print(f'O triangulo é equilátero!')
+elif ladoA == ladoB:
+    print(f'O triangulo é isósceles!')
+elif ladoA != ladoB != ladoC:
+    print("O triangulo é escaleno!") 
+
+print(f'Exercício 18')
+pergunta = input('Insira a operaçao matemática: (adiçao), (subtraçao), (multiplicaçao), (divisao): ')
+num1 = float(input('Insira o numero desejado: '))
+num2 = float(input('Insira o numero desejado: '))
+if pergunta == 'adiçao':
+    soma = (num1 + num2)
+    print(f'O resultado da soma dos números informados é = %.2f' % soma)
+elif pergunta =='subtraçao':
+    subtraçao = (num1 - num2)
+    print(f'O resultado da subtraçao dos números é = %.2f' % subtraçao)
+elif pergunta =='multiplicaçao':
+    multiplicaçao = (num1 * num2)
+    print(f'O resultado da multiplicaçao é = %.2f' % multiplicaçao)
+elif pergunta == 'divisao':
+    divisao = (num1 / num2)
+    print(f'O resultado da divisao é = %.2f' % divisao)
+""""
 ## {} []
