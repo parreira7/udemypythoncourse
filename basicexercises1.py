@@ -263,5 +263,221 @@ elif pergunta =='multiplicaçao':
 elif pergunta == 'divisao':
     divisao = (num1 / num2)
     print(f'O resultado da divisao é = %.2f' % divisao)
-""""
+    
+print(f'Exercício 19')
+numero = int(input('Insira um numero.'))
+def div3(numero):
+    if numero % 3 == 0:
+        return 'Divisível por 3'
+        print(f'Divisível por 3.')
+    elif numero % 3 != 0:
+        print(f'por 3 será inválido.')
+
+result = div3(numero)
+print(result)
+
+def div5(numero):
+    if numero % 5 == 0:
+        return 'Divisível por 5'
+        print(f'Divisível por 5.')
+    elif numero % 5 != 0:
+        print(f'por 5 será inválido.')
+        
+result = div5(numero)
+print(result)
+
+print(f'Exercício 20')
+pergunta = input('Insira a operaçao matemática: (adiçao), (diferença), (produto), (divisao): ')
+num1 = float(input('Insira o número 1: '))
+num2 = float(input('Insira o número 2: '))
+if pergunta == 'adiçao':
+    soma = (num1 + num2)
+    print(f'O resultado da soma dos números informados é = %.2f' % soma)
+elif pergunta == 'diferença':
+    if num1 > num2:
+        print(num1, f'será maior que', num2)
+    elif num2 > num1:
+        print(num2, f'será maior que', num1)
+elif pergunta == 'produto':
+    prod = (num1 * num2)
+    print(f'O produto será %.2f' % prod)
+elif pergunta == 'divisao':
+    divisao = (num1 / num2)
+    print(f'O resultado da divisao é = %.2f' % divisao)
+else:
+    print(f'Erro de digitaçao na pergunta.')
+    
+print(f'Exercício 21')
+idade = int(input("Insira a idade: "))
+tempotrab = int(input("Insira o tempo trabalhado durante a vida: "))
+if (idade >= 65) and (tempotrab >= 30):
+    print(f'Voce pode se aposentar.')
+elif (idade >= 60) and (tempotrab >= 25):
+    print(f'Voce pode se aposentar')
+else:
+    print(f'Voce nao pode se aposentar.')
+    
+print(f'Exercício 22')
+ano = int(input("Insira um ano: "))
+if (ano % 400 == 0) or (ano % 4 == 0) and (ano % 100 != 0):
+    print(f'O ano é bissexto.')
+else:
+    print(f'Inválido. O ano nao é bissexto.')
+    
+print(f'Exercício 23')
+mg = 0.07
+sp = 0.12
+rj = 0.15
+ms = 0.08
+
+valorP = float(input("Insira o valor da passagem: "))
+destino = input("Insira o destino: (MG), (SP), (RJ) ou (MS): ")
+if destino == 'MG':
+    prod = (valorP * mg)
+    soma = (prod + valorP)
+    print(f'O preço da passagem será: %.2f' % soma)
+elif destino == 'SP':
+    prod = (valorP * sp)
+    soma = (prod + valorP)
+    print(f'O preço da passagem será: %.2f' % soma)
+elif destino == 'RJ':
+    prod = (valorP * rj)
+    soma = (prod + valorP)
+    print(f'O preço da passagem será: %.2f' % soma)
+elif destino == 'MS':
+    prod = (valorP * ms)
+    soma = (prod + valorP)
+    print(f'O preço da passagem será: %.2f' % soma)
+else:
+    print(f'Destino inválido.')
+    
+print(f'Exercício 24')
+def bhaskara(x1, x2, x3):
+    delta = (x2 ** 2) - 4 * (x1 * x3)
+    calculox1 = (-x2 + delta ** (1 / 2)) / (2 * x1)
+    calculox2 = (-x2 - delta ** (1 / 2)) / (2 * x1)
+    if x1 == 0:
+        print(f'O valor de A nao pode ser 0!')
+    elif delta < 0:
+        print(f'Nao existem raizes reais.')
+    print(f'A raiz x1 será = %.2f' % calculox1)
+    print(f'A raiz x2 será = %.2f' % calculox2)
+    return calculox1
+    return calculox2
+
+valorA = float(input("Insira o valor de A: "))
+valorB = float(input("Insira o valor de B: "))
+valorC = float(input("Insira o valor de C: "))
+
+calc = bhaskara(valorA, valorB, valorC)
+
+print(f'Exercício 25')
+distanciaKm = float(input("Insira a distancia percorrida em KM: "))
+qtdLporP = float(input('Insira a quantidade de litros consumidas durante o percurso: '))
+consumo = (distanciaKm / qtdLporP)
+print(f'O consumo será de: %.2f' % consumo)
+if (consumo) < 8:
+    print(f'Venda o carro!')
+elif (consumo >= 8) and (consumo <= 14):
+    print(f'O carro é economico!')
+elif (consumo > 12):
+    print(f'O carro é super economico!') 
+    
+print(f'Exercício 26')
+idade = float(input("Insira a idade: "))
+if (idade >= 5) and (idade <= 7):
+    print(f'Categorizado como infantil A')
+elif (idade >= 8) and (idade <= 10):
+    print(f'Categorizado como infantil B')
+elif (idade >= 11) and (idade <= 13):
+    print(f'Categorizado como juvenil A')
+elif (idade >= 14) and (idade <= 17):
+    print(f'Categorizado como juvenil B')
+elif (idade >= 18):
+    print(f'Categorizado como senior!')
+    
+print(f'Exercício 27')
+pergunta = input("Qual funçao usará? (geométrica), (aritmética), (ponderada), (harmonica): ")
+num1 = int(input("Insira o valor de x: "))
+num2 = int(input("Insira o valor de y: "))
+num3 = int(input("Insira o valor de z: "))
+if (num1 <= 0) or (num2 <= 0) or (num3 <= 0):
+    print(f'Inválido, os numeros devem ser positivos.')
+
+elif pergunta == 'geométrica':
+    calc = (num1 * num2 * num3)
+    sqrt = calc ** (1./3.) 
+    print(f'Usando a funçao geométrica o resultado será: %.2f' % sqrt)
+elif pergunta == 'aritmética':
+    calc = (num1 + num2 + num3) / 3
+    print(f'Usando a aritmética teremos: %.2f como resultado' % calc)
+elif pergunta == 'ponderada':
+    peso = int(input("Insira o peso 1: "))
+    peso1 = int(input("Insira o peso 2: "))
+    calc = (num1 + peso * num2 + peso1 * num3)
+    final = (calc) / (peso * peso1)
+    print(f'A média ponderada será: %.2f' % final)
+elif pergunta == 'harmonica':
+    calc = 1 / ((1/num1) + (1/num2) + (1/num3))
+    print(f'Utilizando da funçao harmonica teremos: %.2f como resultado' % calc)
+else:
+    print(f'Funçao da pergunta inválida.')
+    
+print(f'Exercício 28')
+import random
+num1 = random.randint(1, 101) 
+num2 = random.randint(1, 101)
+num3 = random.randint(1, 101)
+num4 = random.randint(1, 101)
+num5 = random.randint(1, 101)
+num6 = random.randint(1, 101)
+num7 = random.randint(1, 101)
+num8 = random.randint(1, 101)
+num9 = random.randint(1, 101)
+num10 = random.randint(1, 101)
+pergunta = [num1, num2]
+nome = input("Insira o nome do aluno: ")
+print(f'Faça a soma desses dois números: ', num1, num2)
+resposta = int(input("Qual a resposta? R: "))
+if resposta == (num1 + num2):
+        print(f'Acertou!')
+else:
+    print('Errou')
+        
+print(f'Faça a soma desses dois números: ', num3, num4)
+resposta = int(input("Qual a resposta? R: "))
+if resposta == (num3 + num4):
+    print(f'Acertou!')
+else:
+    print('Errou')
+        
+print(f'Faça a soma desses dois números: ', num5, num6)
+resposta = int(input("Qual a resposta? R: "))
+if resposta == (num5 + num6):
+    print(f'Acertou!')
+else:
+    print('Errou')
+    
+print(f'Faça a soma desses dois números: ', num7, num8)
+resposta = int(input("Qual a resposta? R: "))
+if resposta == (num7 + num8):
+    print(f'Acertou!')
+else:
+    print('Errou')
+    
+print(f'Faça a soma desses dois números: ', num9, num10)
+resposta = int(input("Qual a resposta? R: "))
+if resposta == (num9 + num10):
+    print(f'Acertou!')
+else:
+    print('Errou')
+    
+print(f'Exercício 29')
+num1 = int(input("Insira um número: "))
+num2 = int(input("Insira um número: "))
+num3 = int(input("Insira um número: "))
+lista = [num1, num2, num3]
+print(sorted(lista))
+"""""
 ## {} []
+print(f'Exercício 30')
