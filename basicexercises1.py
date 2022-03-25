@@ -536,7 +536,59 @@ while True:
         break
     elif sair == 'n':
         pass
+
+print(f'Exercício 32')
+produtoA = float(input("Insira o preço antigo: R$"))
+if produtoA <= 50:
+    mult = 0.5 * produtoA
+    produtoF = mult + produtoA
+    print(f'Com o aumento teremos: R$%.2f' % produtoF)
+    if produtoF <= 80:
+        print(f'Barato!')
+elif produtoA <= 100:
+    mult = 0.10 * produtoA 
+    produtoF = mult + produtoA
+    print(f'Com o aumento teremos: R$%.2f' % produtoF)
+    if (produtoF >= 80) and (produtoF <= 120):
+        print(f'Normal!')
+elif produtoA > 100:
+    mult = 0.15 * produtoA 
+    produtoF = mult + produtoA
+    print(f'Com o aumento teremos: R$%.2f' % produtoF)
+    if (produtoF >= 120) and (produtoF <= 200):
+        print(f'Caro')
+    if produtoF > 200:
+        print(f'MUITO CARO!')
+        
+print(f'Exercício 33')
+tabelaATE = 'Até 20 faltas= A = Nota 9 até 10; B = 7.5 até 8.9; C = 5 até 7.4; D = 4 até 4.9; E = 0 até 3.9'
+tabelaMAIS = 'Mais de 20 faltas= B = Nota 9 até 10; C = 7.5 até 8.9; D = 5 até 7.4; E = 4 até 4.9; E = 0 até 3.9'
+print(tabelaATE)
+print(tabelaMAIS)
+nota = float(input("Insira sua nota: "))
+faltas = int(input("Insira a quantidade de faltas: "))
+if (nota >= 9) and (nota <= 10) and (faltas < 20):
+    print('Conceito A')
+elif (nota >= 7.5) and (nota <= 8.9) and (faltas < 20):
+    print('Conceito B')
+elif (nota >= 5) and (nota <= 7.4) and (faltas < 20):
+    print('Conceito C')
+elif (nota >= 4) and (nota <= 4.9) and (faltas < 20):
+    print('Conceito D')
+elif (nota >= 0) and (nota <= 3.9) and (faltas < 20):
+    print('Conceito D')        
+elif (nota >= 9) and (nota <= 10) and (faltas > 20):
+    print('Conceito B')
+elif (nota >= 7.5) and (nota <= 8.9) and (faltas > 20):
+    print('Conceito C')
+elif (nota >= 5) and (nota <= 7.4) and (faltas > 20):
+    print('Conceito D')
+elif (nota >= 4) and (nota <= 4.9) and (faltas > 20):
+    print('Conceito E')
+elif (nota >= 0) and (nota <= 3.9) and (faltas < 20):
+    print('Conceito E')
+    
+print(f'Exercício 34')        
 """""
 ## {} [] \
-    
-        
+
