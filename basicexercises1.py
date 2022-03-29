@@ -217,7 +217,7 @@ def calculo(x1, x2, x3):
 base_maior = float(input("Insira a base maior do trapézio: "))
 base_menor = float(input("Insira a base menor do trapézio: "))
 altura = float(input('Insira a altura do trapézio: '))
-if base_maior or base_menor or altura == 0:
+if base_maior and base_menor or altura == 0:
     print(f'Número inválido!')
 area_t = calculo(base_maior, base_menor, altura)
 print(f'A área do trapézio será: %.2f' % area_t)    
@@ -587,8 +587,72 @@ elif (nota >= 4) and (nota <= 4.9) and (faltas > 20):
     print('Conceito E')
 elif (nota >= 0) and (nota <= 3.9) and (faltas < 20):
     print('Conceito E')
-    
-print(f'Exercício 34')        
-"""""
-## {} [] \
 
+print(f'Exercício 34')      
+dia = int(input("Insira um dia de (1) a (31) dependendo do mês. R: "))
+mes = int(input("Digite um mês de (1) a (12) R: ")) 
+ano = int(input("Digite um ano de (1) a (12) R: "))
+valida = False  
+if(mes==1 or mes==3 or mes==5 or mes==7 or \
+        mes==8 or mes==10 or mes==12):
+        if(dia<=31):
+            valida = True
+# Meses com 30 dias
+elif(mes==4 or mes==6 or mes==9 or mes==11):
+    if(dia<=30):
+            valida = True
+elif mes==2:
+# Teste de ano bissexto
+    if (ano%4==0 and ano%100!=0) or (ano%400==0):
+        if(dia<=29):
+                valida = True
+        elif(dia<=28):
+            valida = True
+if(valida):
+    print(dia, '/', mes, '/', ano)
+    print(f'Data válida!')
+else:
+    print(f'Data inválida.')
+
+print(f'Exercício 35')
+vendamensal = float(input("Insira a quantia de R$ da venda mensal: R$"))
+if (vendamensal >= 100000):
+    comissao = 700
+    calc = comissao * 0.16
+    total = comissao + calc
+    print(f'O total a ser pago para o funcionário será: %.2f' % total)
+elif (vendamensal < 100000) and (vendamensal >= 80000):
+    comissao = 650
+    calc = comissao * 0.14
+    total = comissao + calc
+    print(f'O total a ser pago para o funcionário será: %.2f' % total)
+elif (vendamensal < 80000) and (vendamensal >= 60000):
+    comissao = 600
+    calc = comissao * 0.14
+    total = comissao + calc
+    print(f'O total a ser pago para o funcionário será: %.2f' % total)
+elif (vendamensal < 60000) and (vendamensal >= 40000):
+    comissao = 550
+    calc = comissao * 0.14
+    total = comissao + calc
+    print(f'O total a ser pago para o funcionário será: %.2f' % total)
+elif (vendamensal < 40000) and (vendamensal >= 20000):
+    comissao = 500
+    calc = comissao * 0.14
+    total = comissao + calc
+    print(f'O total a ser pago para o funcionário será: %.2f' % total)
+elif (vendamensal < 20000):
+    comissao = 400
+    calc = comissao * 0.14
+    total = comissao + calc
+    print(f'O total a ser pago para o funcionário será: %.2f' % total)
+"""
+## {} [] \
+print(f'Exercício 36')
+minutos = int(input('Insira os minutos que serão gastos no estacionamento: '))
+#preço
+hora = minutos/60
+
+primeiraH, segundaH = 1
+terceiraH, quartaH = 1.4
+quintaHemD = 2
