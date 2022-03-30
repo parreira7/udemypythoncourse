@@ -646,13 +646,33 @@ elif (vendamensal < 20000):
     calc = comissao * 0.14
     total = comissao + calc
     print(f'O total a ser pago para o funcionário será: %.2f' % total)
+
+print(f'Exercício 37')   
+dia = int(input("Insira o dia de nascimento R: "))
+mes = int(input("Digite o mês de nascimento  R: ")) 
+ano = int(input("Digite o ano de nascimento R: "))
+valida = False  
+if(mes==1 or mes==3 or mes==5 or mes==7 or \
+        mes==8 or mes==10 or mes==12):
+        if(dia<=31):
+            valida = True
+# Meses com 30 dias
+elif(mes==4 or mes==6 or mes==9 or mes==11):
+    if(dia<=30):
+            valida = True
+elif mes==2:
+# Teste de ano bissexto
+    if (ano%4==0 and ano%100!=0) or (ano%400==0):
+        if(dia<=29):
+                valida = True
+        elif(dia<=28):
+            valida = True
+if(valida):
+    print(dia, '/', mes, '/', ano)
+    print(f'Data válida!')
+else:
+    print(f'Data inválida.')
+
 """
 ## {} [] \
-print(f'Exercício 36')
-minutos = int(input('Insira os minutos que serão gastos no estacionamento: '))
-#preço
-hora = minutos/60
-
-primeiraH, segundaH = 1
-terceiraH, quartaH = 1.4
-quintaHemD = 2
+print(f'Exercício 38')
