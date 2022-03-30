@@ -385,4 +385,3 @@ preco_tela = float(input("Insira o preço da tela por metro: R$"))
 preco_por_m = preco_tela * m2
 print(f'O preço para cobrir todo o terreno com tela será de R$%.2f reais\n' % preco_por_m)
 """
-
