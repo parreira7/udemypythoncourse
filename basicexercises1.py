@@ -672,7 +672,68 @@ if(valida):
     print(f'Data válida!')
 else:
     print(f'Data inválida.')
-
+    
+print(f'Exercício 38')
+salarioatual = float(input("Insira o seu salário atual: "))
+tempodeservico = int(input("Insira quantos anos voce trabalha nessa empresa: "))
+if (tempodeservico < 1) and (salarioatual <= 500):
+    salarioPreaj = salarioatual * 0.25
+    calc = salarioatual + salarioPreaj
+    print(f'O salário após o reajuste será: R$%.2f' % calc)
+elif (tempodeservico >=1) and (tempodeservico <= 3) and (salarioatual >= 1000):
+    salarioPreaj = salarioatual * 0.20
+    calc = salarioatual + salarioPreaj + 100
+    print(f'O salário após o reajuste será: R$%.2f' % calc)
+elif (tempodeservico >=4) and (tempodeservico <= 6) and (salarioatual >=1500):
+    salarioPreaj = salarioatual * 0.15
+    calc = salarioatual + salarioPreaj + 200
+    print(f'O salário após o reajuste será: R$%.2f' % calc)
+elif (tempodeservico >= 7) and (tempodeservico <= 10) and (salarioatual <= 2000):
+    salarioPreaj = salarioatual * 0.10
+    calc = salarioatual + salarioPreaj + 300
+    print(f'O salário após o reajuste será: R$%.2f' % calc)
+elif (tempodeservico > 10) and (salarioatual > 2000):
+    somabonus = salarioatual + 500
+    print(f'Voce nao terá reajuste, entretanto terá um bonus de 500! Portanto receberá: R$%.2f' % somabonus)
+    
+print(f'Exercício 39')
+custodefabrica = float(input("Insira o valor do custo de fábrica: "))
+if (custodefabrica <= 12000):
+    comiDist = custodefabrica * 0.05
+    somaComiDist = comiDist + custodefabrica
+    print(f'O total a ser pago pelo carro será: R$%.2f lembrando que nao há impostos.' % somaComiDist)
+elif (custodefabrica >= 12000) and (custodefabrica <= 25000):
+    comiDist = custodefabrica * 0.1
+    somaComiDist = comiDist + custodefabrica
+    imposto = somaComiDist * 0.15
+    somaimposto = somaComiDist + imposto
+    print(f'O total a ser pago pelo carro será: R$%.2f' % somaimposto)
+elif (custodefabrica > 25000):
+    comiDist = custodefabrica * 0.15
+    somaComiDist = comiDist + custodefabrica
+    imposto = somaComiDist * 0.2
+    somaimposto = somaComiDist + imposto
+    print(f'O total a ser pago pelo carro será: R$%.2f' % somaimposto)
+    
+print(f'Exercício 40')
+peso = float(input("Insira o seu peso: "))
+altura = float(input("Insira a sua altura: "))
+def calculoimc(x1, x2, x3):
+    imc = x1 / (x2 * x3)
+    return imc
+resultado = calculoimc(peso, altura, altura)
+print(f'De acordo com o cálculo do IMC teremos o resultado de: %.2f' % resultado)
+if resultado < 18.5:
+    print(f'Voce está abaixo do peso!')
+elif (resultado >= 18.6) and (resultado <= 24.9):
+    print(f'Voce está saudável!')
+elif (resultado >= 25) and (resultado <= 29.9):
+    print(f'Voce está com peso em excesso!')
+elif (resultado >= 30) and (resultado <= 34.9):
+    print(f'Obesidade grau I!')
+elif (resultado >= 35) and (resultado <= 39.9):
+    print(f'Obesidade grau II (severa)!')
+elif (resultado >= 40):
+    print(f'Obesidade grau III (mórbida)!')
 """
 ## {} [] \
-print(f'Exercício 38')
