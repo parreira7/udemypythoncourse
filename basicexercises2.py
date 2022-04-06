@@ -110,5 +110,56 @@ print(f'Exercício 13')
 n = int(input("Insira um número: "))
 for n in range(0, n + 2, 2):
     print(n, end=' ')
+    
+print(f'Exercício 14')
+n = int(input("Insira um numero: "))
+for n in range(n, -1, -1):
+    print(n, end=' ')
+    
+print(f'Exercício 15')
+n = int(input("Insira um número ímpar positivo: "))
+if n % 2 == 0:
+    print("Inválido")
+    quit
+else:
+    for n in range(1, n + 2, 2):
+        print(n, end=' ')
+        
+print(f'Exercício 16')
+n = int(input("Insira um número positivo ímpar: "))
+if n % 2 == 0:
+    print('Inválido')
+    quit
+else:
+    for n in range(n, 0, -2):
+        print(n, end=' ')
+        
+print(f'Exercício 17')
+n = int(input("Insira um número inteiro positivo: "))
+if n > 0:
+    print(n)
+    for n in range(n, n + n):
+        print(n + 1, end=' ')
+else:
+    quit
+    
+print(f'Exercício 18')
+n, n2 = int(input("Insira um numero: ")), int(input("Insira mais um número: "))
+n3, n4 = int(input("Insira mais um número: ")), int(input("Insira mais um número: "))
+numeros = [n, n2, n3, n4]
+if n > 0 or n2 > 0 or n3 > 0 or n4 > 0:
+        print('O maior número será:', max(numeros))
+else:
+    quit
+    
+print(f'Exercício 20')
+n = int(input("Insira um número: "))
+if n > 100 and n <= 999:
+    b = str(n)
+    for i, v in enumerate(b):
+        print(v, end=' ')
+else:
+    print(f'Inválido')
+    quit
 """""
-#[] {}
+#[] {} \
