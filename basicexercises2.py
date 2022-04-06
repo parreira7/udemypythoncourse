@@ -112,4 +112,3 @@ for n in range(0, n + 2, 2):
     print(n, end=' ')
 """""
 #[] {}
-print(f'Exercício 14')
