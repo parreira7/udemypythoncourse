@@ -152,7 +152,7 @@ if n > 0 or n2 > 0 or n3 > 0 or n4 > 0:
 else:
     quit
     
-print(f'Exercício 20')
+print(f'Exercício 19')
 n = int(input("Insira um número: "))
 if n > 100 and n <= 999:
     b = str(n)
@@ -161,5 +161,25 @@ if n > 100 and n <= 999:
 else:
     print(f'Inválido')
     quit
+    
+print(f'Exercício 20')
+n, n2 = int(input("Insira um número: ")), int(input("Insira mais um número: "))
+n3, n4 = int(input("Insira mais um número: ")), int(input("Insira mais um número: "))
+for n in range(n, n4 +2):
+    if n % 2 == 0:
+        print(f'{n} é par!')
+    elif n % 2 != 0:
+        print(f'{n} nao é par!')
+        
+print(f'Exercício 21')
+n, n2 = int(input("Insira um número: ")), int(input("Insira um número: "))
+par = 0
+impar = 1
+for num in range(n, n2, +1):
+    if num % 2 == 0:
+        par += num
+else:
+    impar *= num
+print(f'par: {par}, impar: {impar}')    
 """""
 #[] {} \
