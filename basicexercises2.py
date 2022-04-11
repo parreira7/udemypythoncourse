@@ -161,15 +161,19 @@ if n > 100 and n <= 999:
 else:
     print(f'Inválido')
     quit
-    
+
 print(f'Exercício 20')
-n, n2 = int(input("Insira um número: ")), int(input("Insira mais um número: "))
-n3, n4 = int(input("Insira mais um número: ")), int(input("Insira mais um número: "))
-for n in range(n, n4 +2):
-    if n % 2 == 0:
-        print(f'{n} é par!')
-    elif n % 2 != 0:
-        print(f'{n} nao é par!')
+p = 0
+n = int(input("Digite o número: "))
+while n != 1000:
+    for n in range(n, 1000 + 2):
+        if n % 2 == 0:
+            print(f'{n} é par!')
+            p = p + 1
+        if n >= 1000:
+            break
+print(f'foram digitados {n} números e {p} deles eram pares!')
+
         
 print(f'Exercício 21')
 n, n2 = int(input("Insira um número: ")), int(input("Insira um número: "))
@@ -183,3 +187,13 @@ else:
 print(f'par: {par}, impar: {impar}')    
 """""
 #[] {} \
+print(f'Exercício 22')
+n = int(input("Quantas notas deseja acrescentar? R: "))
+lista = []
+for i in range(0, n):
+    n = int(input("Insira uma nota de 10 a 20: "))
+    lista.append(n)
+print(f'{lista}, essas sao as notas!')
+soma = sum(lista)
+media = soma / n
+print(f'A média final será: %.2f' % media)
