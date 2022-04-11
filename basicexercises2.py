@@ -188,10 +188,10 @@ print(f'par: {par}, impar: {impar}')
 
 print(f'Exercício 22')
 contador = 0 
-n = int(input("Quantas notas deseja acrescentar? R: "))
+n = float(input("Quantas notas deseja acrescentar? R: "))
 lista = []
 for i in range(0, n):
-    n = int(input("Insira uma nota de 10 a 20: "))
+    n = float(input("Insira uma nota de 10 a 20: "))
     lista.append(n)
 print(f'{lista}, essas sao as notas!')
 soma = sum(lista)
@@ -243,6 +243,36 @@ n = int(input("insira um número: "))
 for num in range(n, 999):
     if num % 11 == 0 or num % 13 == 0 or num % 17 == 0:
         print(num, end=' ')
+        
+print(f'Exercício 27')
+n = int(input("Insira um numero que deseja harmonizar: "))
+um = 1
+sequencia = [1/2 for num in range(2, n)]
+def harmonica (um, sequencia):
+    formula = um + (sequencia)
+    return formula
+print(f'O número pós harmonizaçao será: %.2f' % harmonica(um, sequencia))
+
+print(f'Exercício 28')
+n = int(input("Insira um número: "))
+fatorial = 1
+for num in range(1, n+1):
+    fatorial = fatorial * n
+def formulaE(um, fatorial):
+    formula = 1 + (1/fatorial)
+    return formula
+print(f'O valor de E será: %.2f' % formulaE(um, n))
+
+import math
+print(f'Exercício 29')
+formulaS = 0 + (1/math.factorial(2) + 2/math.factorial(4)) + (3/math.factorial(6) + 4/math.factorial(8))
+print(f'O valor de S será: %.2f' % formulaS)
 """""
 #[] {} \
-
+print(f'Exercício 30 parte 1')
+n = int(input("Insira um número: "))
+contador = 0
+for num in range(0 + 1, n + 1):
+    contador = contador + num
+    soma = contador + n
+print(f'A soma dos números sequenciais, começando de 1 até N, será: %.2f' % soma)
