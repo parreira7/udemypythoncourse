@@ -185,9 +185,9 @@ for num in range(n, n2, +1):
 else:
     impar *= num
 print(f'par: {par}, impar: {impar}')    
-"""""
-#[] {} \
+
 print(f'Exercício 22')
+contador = 0 
 n = int(input("Quantas notas deseja acrescentar? R: "))
 lista = []
 for i in range(0, n):
@@ -197,3 +197,52 @@ print(f'{lista}, essas sao as notas!')
 soma = sum(lista)
 media = soma / n
 print(f'A média final será: %.2f' % media)
+
+print(f'Exercício 23')
+n = int(input("Insira um número: "))
+if n < 0:
+    print(f'Inválido, o número tem de ser positivo!')
+    quit
+else:
+    for i in range(1, 1001):
+        if n % i == 0:
+            print(f'{n} é divisível por {i}')
+            
+print(f'Exercício 24')
+n = int(input("Insira um número positivo: "))
+if n < 0:
+    print(f'Inválido.')
+    quit
+else:
+    for i in range(1, 1000001):
+        if n % i == 0:
+            print(f'{n} é divisível por {i}')
+def soma_divisores(i):
+    divisores = [1]
+    for i in range(2, i):
+        if n % i == 0:
+            divisores.append(i)
+    return sum(divisores)
+print(f'A soma dos divisores sem contar ele mesmo será:', soma_divisores(n))
+
+print(f'Exercício 25')
+for num in range(1, 1000):
+    if num % 3 == 0 or num % 5 == 0:
+        print(num, end=' ')
+def soma_numeros(num):
+    numeros = [1]
+    for i in range(1, num):
+        if num % num == 0:
+            numeros.append(num)
+    return sum(numeros)
+print(f'\n')
+print(f'A soma dos números múltiplos de 3 e 5 será:', soma_numeros(num))
+
+print(f'Exercício 26')
+n = int(input("insira um número: "))
+for num in range(n, 999):
+    if num % 11 == 0 or num % 13 == 0 or num % 17 == 0:
+        print(num, end=' ')
+"""""
+#[] {} \
+
