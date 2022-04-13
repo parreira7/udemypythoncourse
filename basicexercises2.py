@@ -258,17 +258,16 @@ n = int(input("Insira um número: "))
 fatorial = 1
 for num in range(1, n+1):
     fatorial = fatorial * n
-def formulaE(um, fatorial):
-    formula = 1 + (1/fatorial)
-    return formula
-print(f'O valor de E será: %.2f' % formulaE(um, n))
+    def formulaE(um, fatorial):
+        formula = 1 + (1/fatorial)
+        return formula
+print(f'O valor de E será: %.2f' % formulaE(fatorial, n))
 
 import math
 print(f'Exercício 29')
 formulaS = 0 + (1/math.factorial(2) + 2/math.factorial(4)) + (3/math.factorial(6) + 4/math.factorial(8))
 print(f'O valor de S será: %.2f' % formulaS)
-"""""
-#[] {} \
+
 print(f'Exercício 30 parte 1')
 n = int(input("Insira um número: "))
 contador = 0
@@ -276,3 +275,36 @@ for num in range(0 + 1, n + 1):
     contador = contador + num
     soma = contador + n
 print(f'A soma dos números sequenciais, começando de 1 até N, será: %.2f' % soma)
+
+
+print(f'Exercício 30 parte 2')
+n = int(input("Insira um número: "))
+lista = []
+for num in range(6, n + 1):
+    lista.append(num)
+    soma = sum(lista)
+    formula = 1 - 2 + 3 - 4 + 5 + (soma + (2 * n - 1))
+print(formula)
+print(lista)
+
+print(f'Exercício 30 Parte 3')
+n = int(input("Insira um número: "))
+lista = []
+if n % 3 == 0 or n % 5 == 0 or n % 7 == 0 or n % 9 == 0:
+    for num in range(1, n + 1):
+        lista.append(num)
+        soma = sum(lista)
+        formula = soma + (2 * n - 1)
+    else:
+        quit
+print(formula)
+print(lista)
+"""""
+#[] {} \
+print(f'Exercício 31')
+
+    
+    
+    
+
+
