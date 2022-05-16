@@ -299,12 +299,111 @@ if n % 3 == 0 or n % 5 == 0 or n % 7 == 0 or n % 9 == 0:
         quit
 print(formula)
 print(lista)
+
+print(f'Exercício 31')
+print(f'Faça um programa que calcule e escreva o valor de S:\n S = 1/1 + 3/2 + 5/3 + 7/4 ... 99/50\n')
+numerador = denominador = 1
+resultado = 0
+for i in range(50):
+   resultado += numerador / denominador
+   numerador += 2
+   denominador += 1
+print(resultado)
+
+print(f'Exercício 32')
+print(f'Lançamento de d1 e d2, saída = número de cada dado e a relaçao entre eles (>, <, =) de cada lançamento!')
+n = int(input("Insira quantas vezes quer que os dados d1 e d2 sejam lançados: "))
+for pergunta in range(n):
+    pergunta = d1, d2 = float(input("Insira o valor de d1: ")), float(input("Insira o valor de d2: "))
+    while d1 > d2:
+        print(f'O dado D1 é maior, visto que, {d1} > {d2}')
+        break
+    while d2 > d1:
+        print(f'O dado D2 é maior, visto que, {d2} > {d1}')
+        break
+    while d1 == d2:
+        print(f'{d1} é igual a {d2}')
+        break
+
+print(f'Exercício 33')
+n = int(input("Insira quantas vezes deseja adicionar números: "))
+for pergunta in range(n):
+    n, i, j = int(input("Insira o valor de n: ")), int(input("Insira o valor de i: ")), int(input("Insira o valor de j: "))
+    while n % i == 0:
+        print(f'{n} é múltiplo de {i}!')
+        break
+    while n % j == 0:
+        print(f'{n} é múltiplo de {j}!')
+        break
+
+print(f'Exercício 34')
+from math import gcd
+def mmc(numeros):
+    m = 1
+    for n in numeros:
+        m = m * n // gcd(m, n)
+        return m
+numeros = range(2, 21)
+print(mmc(numeros))
+
+print(f'Exercício 35')
+lista = []
+num1, num2 = int(input("Insira o início: ")), int(input("Insira o final: "))
+for numero in range(num1, num2 + 1, 2):
+    addlista = lista.append(numero)
+    soma = sum(lista)
+print(lista)
+print(f'A soma dos números impares no intervalo de {num1} até {num2} será {soma}!')
+
+import math
+print(f'Exercício 36')
+contador = 0
+for i in range(1, 10 + 1):
+    i += i
+    potenciaçao = math.pow(i, 2)
+print(potenciaçao)
+lista = []
+for i in range(1, 10 + 1):
+    addlista = lista.append(i)
+soma = sum(lista)
+potencia = math.pow(soma, 2)
+print(potencia)
+diferenca = potencia - potenciaçao
+print(f'A diferença entre a soma dos quadrados dos dez primeiros numeros naturais e o quadrado da soma é {potencia} - {potenciaçao} = {diferenca}')
+
+print(f'Exercício 37')
+lista = []
+for i in range(1000, 10000):
+    lista.append(i)
+for i in lista:
+    k = str(i)
+    k = list(k)
+    numero1 = k[0] + k[1]
+    numero2 = k[2] + k[3]
+    if (int(numero1) + int(numero2)) ** 2 == i:
+        print(i)
+
+import math
+print(f'Exercício 38')
+a = int(input("Valor de A: "))
+b = int(input("Valor de B: "))
+def pitagoras(a, b):
+    formula = math.pow(a, 2) + math.pow(b, 2)
+    return formula
+result = pitagoras(a, b)
+print(f'{a}² + {b}² = {a ** 2} + {b ** 2} = {result} = {math.sqrt(result)}²')
+
+print(f'Exercício 39')
+base = float(input("Insira um valor para a base do triangulo: "))
+altura = float(input("Insira um valor para a altura do triangulo: "))
+if base >= 1 and altura >= 1:
+    calculo = base * altura 
+    divisao = calculo / 2 
+    print(f'Tendo a base no valor de {base} e altura {altura}, usando a fórmula Area = Base * Altura / 2')
+    print(f'A área do triangulo será {divisao}')
+else:
+    print(f'Inválido')
+    quit
 """""
 #[] {} \
-print(f'Exercício 31')
-
-    
-    
-    
-
 
