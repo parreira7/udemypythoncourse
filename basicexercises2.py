@@ -404,6 +404,68 @@ if base >= 1 and altura >= 1:
 else:
     print(f'Inválido')
     quit
+
+print(f'Exercício 40')
+lista = []
+while True:
+    n = int(input("Insira um número inteiro: "))
+    lista.append(n)
+    if n <= 0:
+        lista.pop()
+        print(f'O número deve ser um número inteiro!')
+        break
+print(f'Números na lista: {lista}')
+print(f'O maior número é {max(lista)} e o menor número é {min(lista)}.')
+
+from fractions import Fraction
+print(f'Exercício 41')
+def conta(r1, r2):
+    r = (r1 * r2)
+    fraçao = (Fraction(r1 + r2))
+    result = r / fraçao
+    return result
+while True:
+    r1, r2 = int(input("Insira o valor de R1: ")), int(input("Insira o valor de R2: "))
+    if r1 >= 1 and r2 >= 1:
+        print(f'O resultado da associação em paralelo de dois resistores será: {conta(r1, r2)}!')
+    else:
+        print(f'{r1} ou {r2} devem ser maiores que zero!')
+        break
+
+import math
+print(f'Exercício 42')
+while True:
+    n = int(input("Insira um número: "))
+    if n >= 1:
+        print(f'O quadrado desse número é: {math.pow(n, 2)}, o cubo é: {math.pow(n, 3)} e a raiz quadrada será {math.sqrt(n)}!')
+    else:
+        print(f'O {n} deve ser um inteiro!')
+        break
+
+print(f'Exercício 43')
+lista = []
+while True:
+    idade = int(input("Insira uma idade: "))
+    if idade >= 1:
+        lista.append(idade)
+    else:
+        print(f'Essas são as idades: {lista}')
+        lista.pop()
+        tamanho = len(lista)
+        print(f'Temos {tamanho} idades nesta lista!')
+        print(f'A média das idades será: {(sum(lista)) / tamanho}')
+        break
+
+print(f'Exercício 44')
+num = int(input("Quantos numeros da sequencia de Fibonacci deseja inserir? R: "))
+x1 = 0
+x2 = 1
+fibo_n = 0
+while(x2 <= num):
+    fibo_n = x1 + x2
+    print(f'{fibo_n}', end=' ')
+    x1 = x2
+    x2 = fibo_n
 """""
 #[] {} \
-
+print(f'Exercício 45')
