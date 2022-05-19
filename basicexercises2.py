@@ -466,6 +466,71 @@ while(x2 <= num):
     print(f'{fibo_n}', end=' ')
     x1 = x2
     x2 = fibo_n
+
+print(f'Exercício 45')
+while True:
+    velocidade_kmporh = float(input("Insira uma velocidade km/h: "))
+    velocidade_mpors = float(input("Insira uma velocidade m/s: "))
+    pergunta = input("Deseja converter de km/h para m/s (1) ou m/s para km/h? (2) (3 PARA SAIR): ")
+    if pergunta == '1':
+        print(f'A velocidade convertida de km/h para m/s será {velocidade_kmporh / 3.6}')
+    elif pergunta == '2':
+        print(f'A velocidade convertida de m/s para km/h será {velocidade_mpors * 3.6}')
+    else:
+        print(f'Finalizando o sistema...')
+        break
+
+import random
+print(f'Exercício 46')
+tentativas = 0
+while True:
+    numero = random.randint(1, 1000)
+    pergunta = int(input("Insira um chute de 1 a 1000: "))
+    if pergunta != numero:
+        tentativas += 1
+        print(f'{pergunta} não é o número certo, tente novamente!')
+    else:
+        print(f'Você acertou o número {numero} com {tentativas} tentativas!')
+        break
+
+print(f'Exercício 47')
+operaçoes = ('Operações: adição(1), subtração (2), multiplicação (3), divisão (4), sair (5)')
+while True:
+    print(f'{operaçoes}')
+    pergunta = int(input("Insira alguma das operações do menu: "))
+    num1, num2 = int(input("Insira um número: ")), int(input("Insira um número: "))
+    if pergunta == 1:
+        print(f'{num1} + {num2} = {num1 + num2}')
+    elif pergunta == 2:
+        print(f'{num1} - {num2} = {num1 - num2}')
+    elif pergunta == 3:
+        print(f'{num1} * {num2} = {num1 * num2}')
+    elif pergunta == 4:
+        print(f'{num1} / {num2} = {num1 / num2}')
+    else:
+        print(f'Finalizando o sistema...')
+        break
+
+print(f'Exercício 48')
+lista = []
+listapar = []
+x1 = 0
+x2 = 1
+fibo_n = 0
+while(x2 <= 400000000):
+    fibo_n = x1 + x2
+    print(f'{fibo_n}', end=' ')
+    x1 = x2
+    x2 = fibo_n
+    lista.append(x2)
+for element in (lista):
+    if element % 2 == 0:
+        listapar.append(element)
+print(f'\n')
+print(f'{listapar} são os números pares da sequência!')
+print(f'\n{sum(listapar)} é o resultado da soma dos números pares da sequência!')
 """""
 #[] {} \
-print(f'Exercício 45')
+print(f'Exercício 49')
+
+
