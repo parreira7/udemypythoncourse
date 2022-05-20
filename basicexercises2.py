@@ -612,6 +612,113 @@ while True:
     else:
         print(f'{n} não é primo, finalizando o sistema...')
         break
+
+print(f'Exercício 55')
+lista = []
+while True:
+    n = int(input("Insira um numero inteiro: "))
+    if n >= 1:
+        for numero in range(0 , n + 1):
+            if numero % 3 == 0 or numero % 5 == 0 or numero % 7 == 0 or numero % 9 == 0:
+                lista.append(numero)
+    print(f'A soma dos números primos na lista: {lista} será {sum(lista)}!')
+
+print(f'Exercício 56')
+lista = []
+for numero in range(0, 19999999):
+    if numero % 3 == 0 or numero % 5 == 0 or numero % 7 == 0 or numero % 9 == 0:
+        lista.append(numero)
+print(f'A soma dos números primos na lista será {sum(lista)}!')
+
+print(f'Exercício 57')
+a, b = int(input("Insira o valor de A: ")), int(input("Insira o valor de B: "))
+lista = []
+contador = 0
+for numeros in range(a, b + 1):
+    if numeros % 3 == 0 or numeros % 5 == 0 or numeros % 7 == 0 or numeros % 9 == 0:
+        lista.append(numeros)
+        contador += 1
+print(f'Existem {contador} números primos no intervalo de {a} até {b}!')
+
+print(f'Exercício 58')
+a, b = int(input("Insira o valor de A: ")), int(input("Insira o valor de B: "))
+lista = []
+contador = 0
+for numeros in range(a, b + 1):
+    if numeros % 3 == 0 or numeros % 5 == 0 or numeros % 7 == 0 or numeros % 9 == 0:
+        lista.append(numeros)
+        contador += 1
+print(f'Existem {contador} números primos no intervalo de {a} até {b}!')
+print(f'E a soma de tais números será de {sum(lista)}.')
+
+print(f'Exercício 59')
+lista = []
+def formula(potencia, horas, dias_no_mes):
+    consumo = (potencia * horas) * (dias_no_mes / 1000)
+    return consumo
+while True:
+    habitantes = int(input("Insira o total de habitantes na cidade: "))
+    if habitantes >= 1:
+        valor = float(input("Insira o valor de KWH: "))
+        potencia = int(input("Insira o valor da potência (W): "))
+        horas = int(input("Insira a quantidade de horas de uso por dia: "))
+        dias_no_mes = int(input("Insira o valor de dias de uso no mês: "))
+        resultado = ((habitantes * valor) / habitantes) * formula(potencia, horas, dias_no_mes)
+        print(f'O resultado do consumo por habitante será R${int(resultado)}.')
+    else:
+        print(f'Finalizando o sistema...')
+        break
+
+print(f'Exercício 60')
+lista = []
+contador = 0
+while True:
+    print(f'Menu: \n (A) = Soma dos números digitados \n (B) = A quantidade de números digitados \n (C) = A média dos números digitados \n (D) = O maior número digitado \n (E) = O menor número digitado \n (F) = A média dos números pares')
+    pergunta = input("Insira alguma opção do menu de (A) até (F), digite (0) para finalizar o sistema: ")
+    while pergunta == 'A' or pergunta == 'a':
+        perguntas = int(input("Insira quantos números deseja inserir: "))
+        for pergunta in range(perguntas):
+            numero = int(input("Insira um número inteiro: "))
+            lista.append(numero)
+        print(f'A soma dos números digitados será {sum(lista)}')
+    while pergunta == 'B' or pergunta == 'b':
+        perguntas = int(input("Insira quantos números deseja inserir: "))
+        for pergunta in range(perguntas):
+            numero = int(input("Insira um número inteiro: "))
+            contador += 1
+        print(f'Foram inseridos {contador} números.')
+    while pergunta == 'C' or pergunta == 'c':
+        perguntas = int(input("Insira quantos números deseja inserir: "))
+        for pergunta in range(perguntas):
+            numero = int(input("Insira um número inteiro: "))
+            lista.append(numero)
+        print(f'A soma dos números digitados é {sum(lista)} e a média será {sum(lista) / pergunta} pois fora inserido {perguntas} números.')
+    while pergunta == 'D' or pergunta == 'd':
+        perguntas = int(input("Insira quantos números deseja inserir: "))
+        for pergunta in range(perguntas):
+            numero = int(input("Insira um número inteiro: "))
+            lista.append(numero)
+        print(f'O maior número inserido foi {max(lista)}')
+    while pergunta == 'E' or pergunta == 'e':
+        perguntas = int(input("Insira quantos números deseja inserir: "))
+        for pergunta in range(perguntas):
+            numero = int(input("Insira um número inteiro: "))
+            lista.append(numero)
+        print(f'O menor número digitado foi {min(lista)}')
+    while pergunta == 'F' or pergunta == 'f':
+        perguntas = int(input("Insira quantos números deseja inserir: "))
+        for pergunta in range(perguntas):
+            numero = int(input("Insira um número inteiro: "))
+            if numero % 2 == 0:
+                lista.append(numero)
+        print(f'A soma dos números pares será {sum(lista)}.')
+    if pergunta == 0:
+        print(f'Finalizando sistema...')
+        break
+
+print(f'Exercício 61')
+from itertools import product
+num_palindromes = (i*j for i, j in product(range(100, 1000), repeat=2) if str(i*j) == str(i*j)[::-1])
+print(f'O maior palíndromo encontrado foi {max(num_palindromes)}!')
 """""
 #[] {} \
-print(f'Exercício 55')
