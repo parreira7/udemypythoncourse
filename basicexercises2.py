@@ -529,8 +529,89 @@ for element in (lista):
 print(f'\n')
 print(f'{listapar} são os números pares da sequência!')
 print(f'\n{sum(listapar)} é o resultado da soma dos números pares da sequência!')
+
+print(f'Exercício 49')
+funcionarios = ['Carlos', 'João']
+meses = 0
+while True:
+    salario, qtd_meses = int(input("Insira o salário que Carlos irá receber: ")), int(input(f"Quantos meses {funcionarios[0]} irá investir? R: "))
+    if salario >= 1:
+        salariojoao  = salario / 3
+        print(f'{funcionarios[1]}, recebe R${salariojoao} enquanto {funcionarios[0]} recebe R${salario}!')
+        for num in range(0, qtd_meses):
+            salario += (salario * 0.5)
+        while salario > salariojoao:
+            meses += 1
+            salariojoao += (salariojoao * 0.2)
+        print(f'{funcionarios[1]} precisa investir por {meses} meses para receber R${salariojoao} e ficar equivalente ou ultrapassar a quantia de R${salario} de {funcionarios[0]}')
+    else:
+        print(f'Finalizando o sistema...')
+        break
+
+print(f'Exercício 50')
+altura_chico = 1.5
+altura_ze = 1.1
+anos = int(input("Insira quantos anos deseja estimar: "))
+for ano in range(0, anos, 1):
+    altura_chico += 0.02
+    altura_ze += 0.03
+while altura_ze <= altura_chico:
+    anos += 1
+    print(f'Zé precisará de {anos} anos para ultrapassar a altura de {altura_chico}.')
+    break
+
+print(f'Exercício 51')
+ano_atual = 2022
+salario_1997 = 2294
+ano = 1997
+aumento = 0.15
+for n in range(ano, ano_atual + 1, 1):
+    aumento = aumento + (aumento * 2)
+    salario_1997 += aumento
+    print(f'O salário em {n} será de R${int(salario_1997)}!')
+
+print(f'Exercício 52')
+notas = [100, 50, 20, 10, 5, 2, 1]
+while True:
+    saque = float(input("Insira o valor que será sacado: "))
+    if saque >= 1:
+        cem, saque = int(saque / notas[0]),  saque % 100
+        cinquenta, saque = int(saque / notas[1]),  saque % 50
+        vinte, saque = int(saque / notas[2]),  saque % 20
+        dez, saque = int(saque / notas[3]),  saque % 10
+        cinco, saque = int(saque / notas[4]),  saque % 5
+        dois, saque = int(saque / notas[5]),  saque % 2
+        um, saque = int(saque / notas[6]),  saque % 1
+        um = saque
+        print(f'Notas de R$100 necessárias: {cem}')
+        print(f'Notas de R$50 necessárias: {cinquenta}')
+        print(f'Notas de R$20 necessárias: {vinte}')
+        print(f'Notas de R$10 necessárias: {dez}')
+        print(f'Notas de R$5 necessárias: {cinco}')
+        print(f'Notas de R$2 necessárias: {dois}')
+        print(f'Notas de R$1 necessárias: {um}')
+    else:
+        print(f'Finalizando o sistema...')
+        break
+
+
+print(f'Exercício 53')
+num = 1
+num_final = int(input("Insira a quantidade de linhas desejadas: "))
+for n in range(1, num_final + 1):
+    for i in range(1, n + 1):
+        print(num, end= ' ')
+        num += 1
+    print()
+
+print(f'Exercício 54')
+while True:
+    n = int(input("Insira um numero inteiro: "))
+    if n % 3 == 0 or n % 5 == 0 or n % 7 == 0 or n % 9 == 0:
+        print(f'{n} é primo!')
+    else:
+        print(f'{n} não é primo, finalizando o sistema...')
+        break
 """""
 #[] {} \
-print(f'Exercício 49')
-
-
+print(f'Exercício 55')
