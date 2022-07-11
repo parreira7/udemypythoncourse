@@ -115,5 +115,37 @@ for aluno in range(qtd_alunos):
 soma_notas = sum(vetor)
 media = soma_notas / qtd_alunos
 print(f'A média geral da classe contendo {qtd_alunos} alunos será de {media}!')
-"""""
+
 print(f'Exercício 11')
+qtd_valores = 10
+vetor = []
+contador = 0
+for valores in range(qtd_valores):
+    valor = int(input("Insira um valor: "))
+    if valor >= 0:
+        vetor.append(valor)
+    else:
+        contador += 1
+print(f'Nesse vetor teremos {contador} números negativos e a soma de todos os números positivos será de {sum(vetor)}')
+
+print(f'Exercício 12')
+qtd_valores = 5
+vetor = []
+for qtd in range(qtd_valores):
+    valor = int(input("Insira um valor: "))
+    vetor.append(valor)
+print(f'Esse será o nosso vetor {vetor}, o maior valor será {max(vetor)} e o menor será {min(vetor)}')
+soma = sum(vetor)
+media = soma / qtd_valores
+print(f'A média geral dos vetores será de {media}')
+
+print(f'Exercício 13')
+qtd_valores = 5
+vetor = []
+for qtd in range(qtd_valores):
+    valor = int(input("Insira um valor: "))
+    vetor.append(valor)
+print(f'Esse será o nosso vetor: {vetor}, o maior valor se encontra na posição {vetor.index(max(vetor))} e o menor valor se encontra na posição {vetor.index(min(vetor))}')
+"""""
+print(f'Exercício 14')
+
