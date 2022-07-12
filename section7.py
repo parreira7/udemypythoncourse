@@ -146,6 +146,26 @@ for qtd in range(qtd_valores):
     valor = int(input("Insira um valor: "))
     vetor.append(valor)
 print(f'Esse será o nosso vetor: {vetor}, o maior valor se encontra na posição {vetor.index(max(vetor))} e o menor valor se encontra na posição {vetor.index(min(vetor))}')
-"""""
-print(f'Exercício 14')
 
+print(f'Exercício 14')
+qtd_valores = 10
+vetor = []
+for qtd in range(qtd_valores):
+    valor = int(input("Insira um valor: "))
+    vetor.append(valor)
+duplicados = [value for value in vetor if vetor.count(value) > 1]
+unicos_duplicados = list(set(duplicados))
+print(f'Os números repetidos são {unicos_duplicados}')
+
+print(f'Exercício 15')
+qtd_valores = 20
+vetor = []
+for qtd in range(qtd_valores):
+    valor = int(input("Insira um valor: "))
+    vetor.append(valor)
+vetor_final = list(set(vetor))
+print(f'{vetor} vetor com números repetidos.')
+print(f'{vetor_final} vetor sem números repetidos')
+"""""
+print(f'Exercício 16')
+#in progress
