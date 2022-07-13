@@ -166,6 +166,63 @@ for qtd in range(qtd_valores):
 vetor_final = list(set(vetor))
 print(f'{vetor} vetor com números repetidos.')
 print(f'{vetor_final} vetor sem números repetidos')
-"""""
+
 print(f'Exercício 16')
-#in progress
+qtd_valores = 5
+vetor = []
+for qtd in range(qtd_valores):
+    valor = int(input("Insira um valor: "))
+    vetor.append(valor)
+pergunta = int(input("Insira 1 para imprimir o vetor de forma direta, e 2 para imprimir da forma inversa: "))
+if pergunta == 1:
+    print(f'{sorted(vetor)}')
+elif pergunta == 2:
+    print(f'{sorted(vetor, reverse=True)}')
+else:
+    print(f'Inválido')
+
+print(f'Exercício 17')
+qtd_valores = 10
+vetor = []
+vetor_negativo = []
+for qtd in range(qtd_valores):
+    valor = int(input("Valor: "))
+    if valor < 0:
+        vetor.append(0)
+    else:
+        vetor.append(valor)
+print(vetor)
+
+print(f'Exercício 18')
+qtd_valores = 10
+contador = 0
+vetor = []
+multiplos = []
+for qtd in range(qtd_valores):
+    valor = int(input("Insira um valor: "))
+    vetor.append(valor)
+x = int(input("Insira um valor para X: "))
+for v in vetor:
+    if v % x == 0:
+        contador += 1
+        multiplos.append(v)
+print(f'{x} é múltiplo de {contador} numeros inteiros. São eles {multiplos}')
+
+print(f'Exercício 19')
+import random
+vetor = []
+expressao_visual = '(i + 5 * i) % (i + 1)'
+def formula(i):
+    expressao = (i + 5 * i) % (i + 1)
+    return expressao
+qtd_valores = 50
+for qtd in range(qtd_valores):
+    numero_aleatorio = random.randint(1, 101)
+    vetor.append(numero_aleatorio)
+print(f'Esse será o nosso vetor {vetor}')
+escolha = int(input("Escolha uma posição de 0 a 49 para realizar a fórmula! R: "))
+valor = vetor[escolha]
+resultado = formula(valor)
+print(f'O resultado utilizando a fórmula {expressao_visual} sendo i = valor da posição escolhida, será de {resultado}')
+"""""
+print(f'Exercício 20')
